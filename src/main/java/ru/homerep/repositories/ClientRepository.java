@@ -6,9 +6,9 @@ import ru.homerep.models.Client;
 
 import java.util.List;
 
-public interface Clientrepository extends CrudRepository<Client, Long> {
-    Client findClientByName(String name);
+public interface ClientRepository extends CrudRepository<Client, Long> {
+    Client findClientByFirstNameAndLastName(String firstName, String lastName);
     Client findClientById(Long id);
     Client findClientByEmail(String email);
-    List<Client> findClientsByCategory(Category category);
+
 }
